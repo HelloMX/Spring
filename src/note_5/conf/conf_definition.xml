@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="note_5.definition.HelloWorldImpl" />
+
+    <bean id="helloWorld" class="note_5.definition.HelloWorldImpl"/>
+
+    <bean name="helloWorldByName" class="note_5.definition.HelloWorldImpl"/>
+
+    <bean id="helloWorldByIdAndName" name="helloWorldByNameAndId"  class="note_5.definition.HelloWorldImpl"/>
+
+    <bean name="bean1;alias11;alias12;alias13" class="note_5.definition.HelloWorldImpl"/>
+    <bean id="bean2" name="alias21;alias22;alias23"  class="note_5.definition.HelloWorldImpl"/>
+
+    <bean name="bean3" class="note_5.definition.HelloWorldImpl" />
+    <alias name="bean3" alias="alias31"/>
+    <alias name="bean3" alias="alias32"/>
+</beans>
