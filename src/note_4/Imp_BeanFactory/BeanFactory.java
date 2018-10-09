@@ -1,4 +1,4 @@
-package note_4.reflect.Imp_BeanFactory;
+package note_4.Imp_BeanFactory;
 
 import java.io.InputStream;
 import java.lang.reflect.Method;
@@ -106,7 +106,7 @@ public class BeanFactory {
 	 */
 	public static void main(String[] args) {
 		BeanFactory factory = new BeanFactory();
-		factory.init("note_4/reflect/Imp_BeanFactory/conf/config.xml");
+		factory.init("note_4/Imp_BeanFactory/conf/config.xml");
 		JavaBean javaBean = (JavaBean) factory.getBean("javaBean");
 		System.out.println("userName=" + javaBean.getUserName());
 		System.out.println("password=" + javaBean.getPassword());

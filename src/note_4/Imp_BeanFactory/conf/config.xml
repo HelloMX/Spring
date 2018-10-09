@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans>
-    <bean id="javaBean" class="note_4.reflect.Imp_BeanFactory.JavaBean">
+    <bean id="javaBean" class="note_4.Imp_BeanFactory.JavaBean">
        <property name="userName">
            <value>Mx</value>
        </property>

@@ -1,4 +1,4 @@
-package note_4.reflect.Imp_BeanFactory;
+package note_4.Imp_BeanFactory;
 
 public class JavaBean {
 
