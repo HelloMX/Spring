@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="world" class="java.lang.String">
+        <constructor-arg value="#{'World'}"/>
+    </bean>
+
+    <bean id="hello1" class="java.lang.String">
+        <constructor-arg value="#{'Hello'}#{world}"/>
+    </bean>
+
+    <bean id="hello2" class="java.lang.String">
+        <constructor-arg value="#{'Hello'+world}"/>
+        <!--不支持嵌套-->
+        <!--<constructor-arg value="#{'Hello'#{world}}"/>-->
+    </bean>
+
+    <bean id="hello3" class="java.lang.String">
+        <constructor-arg value="#{'Hello'+@world}"/>
+    </bean>
+
+
+    <!--开启对注解的 支持-->
+    <context:annotation-config/>
+
+    <bean id="helloBean1" class="note_7.spel.AnnotationExpression"/>
+
+    <bean id="helloBean2" class="note_7.spel.AnnotationExpression">
+        <property name="value" value="haha"/>
+    </bean>
+
+</beans>
