@@ -1,0 +1,13 @@
+package note_8.aop.aspect;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+	 public static void main(String[] args) {  
+		       ApplicationContext ctx = new ClassPathXmlApplicationContext("note_8/conf/conf-aspect.xml");
+		         Student stu = (Student)ctx.getBean("student");
+		 	        stu.print("this is name");
+			    }  
+
+}
