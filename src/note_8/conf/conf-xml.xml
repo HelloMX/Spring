@@ -5,27 +5,29 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd  
 	http://www.springframework.org/schema/aop 
 	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
-	<aop:aspectj-autoproxy />
 
+	<aop:aspectj-autoproxy />
 	<bean id="stu" class="note_8.aop.xml.Student"></bean>
 	<bean id="interceptor" class="note_8.aop.xml.StudentInterceptor"></bean>
 
 	<aop:config>
 		<aop:aspect id="stuInterceptor" ref="interceptor">
 			<aop:before
-				pointcut="execution(* note_8.aop.xml.Student.print(..))"
-				method="printBeforeAdvice" />
-			<aop:after-returning 
-				pointcut="execution(* note_8.aop.xml.Student.print(..))and args(flag)"
-				method="printAfterAdvice"  arg-names="flag"/>
+					pointcut="execution(* note_8.aop.xml.Student.print(..))"
+					method="printBeforeAdvice" />
+			<aop:after-returning
+					pointcut="execution(* note_8.aop.xml.Student.print(..)) and args(flag)"
+					method="printAfterAdvice"  />
 			<aop:after
-				pointcut="execution(* note_8.aop.xml.Student.print(..))"
-				method="finallyAdvice" />
+					pointcut="execution(* note_8.aop.xml.Student.print(..))"
+					method="finallyAdvice" />
 			<aop:around
-				pointcut="execution(* note_8.aop.xml.Student.print(..)) and args(name)"
-				method="printAroundAdvice" />
+					pointcut="execution(* note_8.aop.xml.Student.print(..)) and args(name)"
+					method="printAroundAdvice" />
 		</aop:aspect>
 	</aop:config>
+
+
 
 
 </beans>  

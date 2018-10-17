@@ -9,6 +9,6 @@
 
 
 	<aop:aspectj-autoproxy />
-	<bean id="studentInterceptor" class="note_8.aop.aspect.StudentInterceptor"></bean>
-	<bean id="student" class="note_8.aop.aspect.Student"></bean>
+	<bean id="studentInterceptor" class="note_8.aop.aspect.StuInterceptor"></bean>
+	<bean id="stu" class="note_8.aop.aspect.Student"></bean>
 </beans>    

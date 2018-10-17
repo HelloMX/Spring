@@ -6,8 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
 	 public static void main(String[] args) {  
 		       ApplicationContext ctx = new ClassPathXmlApplicationContext("note_8/conf/conf-aspect.xml");
-		         Student stu = (Student)ctx.getBean("student");
-		 	        stu.print("this is name");
+		         Student stu = (Student)ctx.getBean("stu");  
+		 	        stu.print("mx");
 			    }  
 
 }
