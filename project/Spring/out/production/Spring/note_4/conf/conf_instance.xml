@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--1. 空构造器实例化：-->
+    <bean id="helloServiceWithNoArgs" class="note_4.instance.HelloWorldImpl" />
+
+    <!--2. 有参数构造器实例化：-->
+    <bean id="helloServiceWithArgs" class=" note_4.instance.HelloWorldImpl">
+        <!-- 指定构造器参数 -->
+        <constructor-arg index="0" value="Hello Spring!"/>
+    </bean>
+
+    <!--静态工厂方法-->
+    <bean id="helloServiceStaticFactory" class="note_4.instance.HelloWorldStaticFactory" factory-method="newInstance">
+        <!-- 指定构造器参数 -->
+        <constructor-arg index="0" value="Hello Static Factory!"/>
+    </bean>
+
+
+    <!-- 1、定义实例工厂Bean -->
+    <bean id="beanInstanceFactory" class="note_4.instance.HelloWorldInstanceFactory" />
+    <!-- 2、使用实例工厂Bean创建Bean -->
+        <bean id="helloWorldInstance" factory-bean="beanInstanceFactory"  factory-method="newInstance">
+            <constructor-arg index="0" value="Hello Instance Factory!"></constructor-arg>
+        </bean>
+    </beans>

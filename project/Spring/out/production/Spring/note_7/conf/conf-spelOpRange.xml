@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="spelLiteral1" class="note_7.spelOpRange.SpelLiteral">
+        <property name="count" value="#{5}"/>
+        <property name="message" value="The value is #{5}"/>
+        <property name="frequency" value="#{89.7}"/>
+        <property name="capacity" value="#{1e4}"/>
+        <property name="name1" value="#{'Chuck'}"/>
+        <property name="name2" value='#{"Chuck"}'/>
+        <property name="enable" value="#{false }"/>
+    </bean>
+
+    <bean id="spelClass" class="note_7.spelOpRange.SpelClass">
+        <property name="pi" value="#{T(java.lang.Math).PI}"/>
+        <property name="randomNumber" value="#{T(java.lang.Math).random()}"/>
+    </bean>
+</beans>
